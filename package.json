@@ -1,7 +1,7 @@
 {
-  "name": "hello-world",
+  "name": "hw07",
   "version": "1.0.0",
-  "description": "Hello world with express and node.js",
+  "description": "CS290 HW07",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
