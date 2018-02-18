@@ -1,11 +1,37 @@
 <h1>POST Request Received</h1>
-<ul>GET Data
-  {{#each getDataList}}
-    <li>{{this.name}}: {{this.value}}
-  {{/each}}
-</ul>
-<ul>POST Data
-  {{#each postDataList}}
-    <li>{{this.name}}: {{this.value}}
-  {{/each}}
-</ul>
+
+<table border="1" cellpadding="5">
+  <caption>URL Query String Parameters</caption>
+  <thead>
+    <tr>
+      <th>KEY</th>
+      <th>VALUE</th>
+    </tr>
+  </thead>
+  <tbody>
+	  {{#each getDataList}}
+	    <tr>
+	    	<th>{{this.name}}</th>
+	    	<td>{{this.value}}</td>
+	    </tr>
+	  {{/each}}
+  </tbody>
+</table>
+<br>
+<table border="1" cellpadding="5">
+  <caption>Post Body Parameters</caption>
+  <thead>
+    <tr>
+      <th>KEY</th>
+      <th>VALUE</th>
+    </tr>
+  </thead>
+  <tbody>
+	  {{#each postDataList}}
+	    <tr>
+	    	<th>{{this.name}}</th>
+	    	<td>{{this.value}}</td>
+	    </tr>
+	  {{/each}}
+  </tbody>
+</table>
