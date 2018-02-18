@@ -21,20 +21,30 @@ app.get('/getpostcombined',function(req,res){
   for (var p in req.query){
     qParams.push({'name':p,'value':req.query[p]})
   }
+
   var context = {};
   context.dataList = qParams;
+  
   res.render('get-loopback-list', context);
 });
 
 //app.post('/post-loopback', function(req,res){
 app.post('/getpostcombined', function(req,res){
+
+  var qParams = [];
+  for (var p in req.query){
+    qParams.push({'name':p,'value':req.query[p]})
+  }
+
   var bParams = [];
   for (var p in req.body){
     bParams.push({'name':p,'value':req.body[p]})
   }
-  
+
   var context = {};
-  context.dataList = bParams;
+  context.getDataList = qParams;
+  context.postDataList = bParams;
+
   res.render('post-loopback', context);
 });
 
